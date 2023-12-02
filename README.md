@@ -2,7 +2,7 @@
 <main>
   <h1> The home of the Tree</h1>
   <h2> A history of the Tree</h2>
-  <img src="https://www.freepik.com/premium-ai-image/cute-pastel-pupy-dog-pastl-room_46902319.htm">
+  <img src="Screen Shot 2023-11-30 at 6.47.17 PM.png">
 </main>
 <section>
   <ul> 
