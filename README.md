@@ -13,6 +13,7 @@
     <li> Dill </li>
     <li> Diggins </li>
     <li> Joe </li>
+    <li> Jordy (Retired)</li>
     <li> Kadlick</li>
     <li> Kross </li>
     <li> Kurt </li>
@@ -21,3 +22,4 @@
     <li> Thomas</li>
   </ul>
 </section>
+<a href="https://docs.google.com/spreadsheets/d/1-kzSt8qtVU4nxO0wFAJZpjzQPoG0neIFbVjJTjcr4l0/edit?pli=1#gid=0"> Fantasy Stats </a>
