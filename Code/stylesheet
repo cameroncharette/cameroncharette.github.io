@@ -1,1 +1,35 @@
-h2{ }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #fff;
+}
+
+input[type="radio"]:checked~.tab-content {
+    display: block;
+}
