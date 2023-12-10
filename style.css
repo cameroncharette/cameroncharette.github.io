@@ -4,32 +4,33 @@ body {
 
 .tabs {
     display: flex;
+    list-style: none;
+    padding: 0;
 }
 
-input[type="radio"] {
-    display: none;
+.tab {
+    margin-right: 10px;
 }
 
-label {
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    flex: 1;
-    cursor: pointer;
-    background-color: #ddd;
+.tab a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+}
+
+.tab a:hover {
+    background-color: #e0e0e0;
 }
 
 .tab-content {
     display: none;
-    padding: 10px;
-    border: 1px solid #ddd;
-    flex: 1;
 }
 
-input[type="radio"]:checked+label {
-    background-color: #fff;
-}
-
-input[type="radio"]:checked~.tab-content {
+.tab-content.active {
     display: block;
 }
+
