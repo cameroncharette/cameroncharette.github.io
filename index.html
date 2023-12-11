@@ -36,19 +36,19 @@
         }
     </style>
     <script>
-        // JavaScript for toggling the visibility of content
-        document.addEventListener('DOMContentLoaded', function () {
-            const collapsibleItems = document.querySelectorAll('.collapsible-item');
+    // JavaScript for toggling the visibility of content
+    document.addEventListener('DOMContentLoaded', function () {
+        const collapsibleItems = document.querySelectorAll('.collapsible-item');
 
-            collapsibleItems.forEach(item => {
-                item.addEventListener('click', function () {
-                    this.classList.toggle('collapsed');
-                    const content = this.nextElementSibling;
-                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                });
+        collapsibleItems.forEach(item => {
+            item.addEventListener('click', function () {
+                this.classList.toggle('collapsed');
+                const content = this.querySelector('.collapsible-content');
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
             });
         });
-    </script>
+    });
+</script>
     <title>The Trust Tree</title>
 </head>
 <body>
