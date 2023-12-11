@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for the expand/collapse functionality */
+        ul.collapsible {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.collapsible li {
+            margin-bottom: 8px;
+        }
+
+        ul.collapsible li.collapsible-item {
+            cursor: pointer;
+        }
+
+        ul.collapsible li.collapsible-item::before {
+            content: '\25B6'; /* Unicode character for '▶' (right-pointing triangle) */
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        ul.collapsible li.collapsible-item.collapsed::before {
+            content: '\25BC'; /* Unicode character for '▼' (down-pointing triangle) */
+        }
+
+        /* Style for the content under each collapsible item */
+        ul.collapsible li.collapsible-content {
+            margin-left: 20px;
+            display: none;
+        }
+    </style>
+    <script>
+        // JavaScript for toggling the visibility of content
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibleItems = document.querySelectorAll('.collapsible-item');
+
+            collapsibleItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.classList.toggle('collapsed');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
     <title>The Trust Tree</title>
 </head>
 <body>
@@ -41,24 +86,21 @@
     </div>
     <div id="tab3" class="tab-content">
         <h2>Bad Takes </h2>
-        <ul>
-            <li> Billy(Retired)</li>
-            <li> Bunyon </li>
-            <li> Cam</li>
-            <li> Christian(Retired)</li>
-            <li> Diggins(Suspended)</li>
-            <li> Joe</li>
-            <li> Jordy(Retired)</li>
-            <li> Kad</li>
-            <li> Koss</li>
-            <li> Kross</li>
-            <li> Kurt</li>
-            <li> Steve</li>
-            <li> Tom</li>
+        <ul class="collapsible">
+            <li class="collapsible-item">Billy (Retired)
+                <ul class="collapsible-content">
+                    <li>Additional content for Billy</li>
+                </ul>
+            </li>
+            <li class="collapsible-item">Bunyon
+                <ul class="collapsible-content">
+                    <li>Additional content for Bunyon</li>
+                </ul>
+            </li>
+            <!-- ... other members ... -->
         </ul>
         <p>Put in screenshots and probably an li here</p>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
