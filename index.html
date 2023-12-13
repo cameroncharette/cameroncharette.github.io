@@ -57,6 +57,12 @@
                     content.style.display = content.style.display === 'none' ? 'block' : 'none';
                 });
             });
+
+            // Collapse the "Bad Takes" content initially
+            const badTakesCollapsibleItems = document.querySelectorAll('#tab3 .collapsible-item');
+            badTakesCollapsibleItems.forEach(item => {
+                item.classList.add('collapsed');
+            });
         });
     } else {
         alert("Incorrect password. Access denied.");
@@ -102,16 +108,16 @@
     <div id="tab3" class="tab-content">
         <h2>Bad Takes</h2>
         <ul class="collapsible">
-            <li class="collapsible-item">Billy (Retired)
+            <li class="collapsible-item collapsed">Billy (Retired)
                 <ul class="collapsible-content">
                     <li>Additional content for Billy</li>
                 </ul>
             </li>
-            <li class="collapsible-item">Bunyon
+            <li class="collapsible-item collapsed">Bunyon
                 <ul class="collapsible-content">
-                    <li>Additional content for Bunyon</li>
-                </ul>
-            </li>
+                    <li>Additional
+
+                        
             <li class="collapsible-item">Cam
                 <ul class="collapsible-content">
                     <li>Cam has never been caught saying something stupid</li>
