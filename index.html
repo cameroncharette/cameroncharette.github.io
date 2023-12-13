@@ -48,6 +48,20 @@
             });
         });
     });
+    // Define the correct password
+    const correctPassword = "Chandler Village";
+
+    // Ask the user for a password
+    const userPassword = prompt("Enter the password:");
+
+    // Check if the entered password is correct
+    if (userPassword === correctPassword) {
+        alert("Password is correct. Welcome!");
+        // Continue loading the content or redirect to the main page
+    } else {
+        alert("Incorrect password. Access denied.");
+        // Optionally, redirect to an error page or take other actions
+    }
 </script>
     <title>The Trust Tree</title>
 </head>
