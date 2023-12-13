@@ -36,19 +36,7 @@
         }
     </style>
     <script>
-    // JavaScript for toggling the visibility of content
-    document.addEventListener('DOMContentLoaded', function () {
-        const collapsibleItems = document.querySelectorAll('.collapsible-item');
-
-        collapsibleItems.forEach(item => {
-            item.addEventListener('click', function () {
-                this.classList.toggle('collapsed');
-                const content = this.querySelector('.collapsible-content');
-                content.style.display = content.style.display === 'none' ? 'block' : 'none';
-            });
-        });
-    });
-   // Define the correct password
+    // Define the correct password
     const correctPassword = "Chandler Village";
 
     // Ask the user for a password
@@ -56,10 +44,23 @@
 
     // Check if the entered password is correct
     if (userPassword === correctPassword) {
-        alert("Password is correct. Welcome!");
-        // Continue loading the content or redirect to the main page
+        alert("Password is correct. Welcome");
+
+        // JavaScript for toggling the visibility of content
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibleItems = document.querySelectorAll('.collapsible-item');
+
+            collapsibleItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.classList.toggle('collapsed');
+                    const content = this.querySelector('.collapsible-content');
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
     } else {
         alert("Incorrect password. Access denied.");
+
         // Redirect to an error page or another URL
         window.location.href = "https://www.youtube.com/watch?v=kJcT18uJK-o";
     }
