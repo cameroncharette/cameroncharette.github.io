@@ -51,7 +51,7 @@
             const collapsibleItems = document.querySelectorAll('.collapsible-item');
 
             collapsibleItems.forEach(item => {
-                item.addEventListener('click', function () {
+                item.addEventListener('DOMContentLoaded', function () {
                     this.classList.toggle('collapsed');
                     const content = this.querySelector('.collapsible-content');
                     content.style.display = content.style.display === 'none' ? 'block' : 'none';
